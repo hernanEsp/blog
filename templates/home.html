@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block content %}
+    <h2>Bienvenido</h2>
+    {% if session['name'] %}
+    <p> Haz iniciado sesion {{ session['name'] }}, ya puedes comenzar</p>
+    {% else %}
+    <p>Inicia sesion <br> o Registrate Gratis</p>
+    {% endif %}
+{% endblock %}
